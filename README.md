@@ -1,4 +1,3 @@
-
 # Add Fingerprint Authentication to Termux
 
 Welcome to the comprehensive guide on how to integrate fingerprint authentication into Termux, the popular terminal emulator for Android. With this step-by-step tutorial, you'll learn how to implement fingerprint-based security within your Termux environment, adding an extra layer of protection to your sensitive data and commands.
@@ -7,6 +6,15 @@ This guide aims to provide clear and concise instructions, accompanied by code s
 
 Whether you're a developer, a tech enthusiast, or someone looking to bolster their Android terminal security, this guide will assist you in implementing fingerprint authentication in your Termux environment quickly and effortlessly. So, let's get started and take your Termux experience to the next level of security and convenience!
 
+## Table of Contents
+
+1. [Prerequisites](#prerequisites)
+
+2. [Setting up Termux Environment](#setting-up-termux-environment)
+
+3. [Implementing Fingerprint Authentication](#implementing-fingerprint-authentication)
+
+4. [Conclusion](#conclusion)
 
 ## Prerequisites
 
