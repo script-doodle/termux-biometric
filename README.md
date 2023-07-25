@@ -14,30 +14,47 @@ Whether you're a developer, a tech enthusiast, or someone looking to bolster the
 
 You'll need an Android device that has a built-in fingerprint sensor. Fingerprint authentication relies on this hardware for biometric recognition.
 
+</br>
+
 **2. Termux and Termux:API Installed**
 
 Make sure you have Termux and Termux:API installed on your Android device. You can download and install them from the [Google Play Store](https://play.google.com/store/apps/details?id=com.termux) or the [F-Droid](https://f-droid.org/en/packages/com.termux/) repository (recommend).
+
+</br>
 
 **3. Basic Familiarity with Terminal**
 
 While this guide aims to be beginner-friendly, having some familiarity with using the terminal or command-line interface will be helpful.
 
+</br>
+
 With these prerequisites in place, you're all set to follow the steps and add fingerprint authentication to your Termux environment. Let's get started!
+
 ## Setting up Termux Environment
 
 **1.Update Termux packages to ensure you have the latest versions.**
 
-```pkg update; pkg upgrade -y```
+```
+pkg update; pkg upgrade -y
+```
+
+</br>
 
 **2.Install necessary package to help your Termux authenticate.**
 
-```pkg install -y termux-api```
+```
+pkg install -y termux-api
+```
 
 *P.S: Don't get confused between `Termux:API` and `termux-api`*
 
+</br>
+
 **3.Enable storage access for biometric data.**
 
-```termux-setup-storage```
+```
+termux-setup-storage
+```
 
 ## Implementing Fingerprint Authentication
 
@@ -45,20 +62,26 @@ With these prerequisites in place, you're all set to follow the steps and add fi
 
 We'll edit the `bash.bashrc` or `zshrc` file. Which are located at `../usr/etc/`
 
-Run the code below to open the file in editor according to your shell
+According to your shell run one of the code below to open the file in editor
 
-```nano ../usr/etc/bash.bashrc```
+```
+nano ../usr/etc/bash.bashrc
+```
 
-```nano ../usr/etc/zshrc```
+```
+nano ../usr/etc/zshrc
+```
 
-Take your cursor to the very end of editor by scrolling up or by using arrow â†“ button and paste the code below
+Take your cursor to the very end of editor by scrolling up or by using arrow &darr; button and paste the code below
 
 ```
 if termux-fingerprint | grep -q "AUTH_RESULT_FAILURE"; then
  am stopservice com.termux/.app.TermuxService
 fi
 ```
-Then execute next few commands accordingly. `CTRL+o` to finish editing, `â†µ` to save the file and `CTRL+x` to exit the editor
+Then execute next few commands accordingly. `CTRL+o` to finish editing, &#9166; to save the file and `CTRL+x` to exit the editor
+
+</br>
 
 **2. Fish Shell Users**
 
@@ -66,16 +89,18 @@ We'll edit the `config.fish` file. Which is located at `../usr/etc/fish/`
 
 Run the code below to open the file in editor
 
-```nano ../usr/etc/fish/config.fish```
+```
+nano ../usr/etc/fish/config.fish
+```
 
-Take your cursor to the very end of editor by scrolling up or by using arrow â†“ button and paste the code below
+Take your cursor to the very end of editor by scrolling up or by using arrow &darr; button and paste the code below
 
 ```
 if termux-fingerprint | grep -q "AUTH_RESULT_FAILURE"; then
  am stopservice com.termux/.app.TermuxService
 end
 ```
-Then execute next few commands accordingly. `CTRL+o` to finish editing, `â†µ` to save the file and `CTRL+x` to exit the editor
+Then execute next few commands accordingly. `CTRL+o` to finish editing, &#9166; to save the file and `CTRL+x` to exit the editor
 
 ## Conclusion
 
