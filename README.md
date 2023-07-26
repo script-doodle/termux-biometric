@@ -113,3 +113,12 @@ Then execute next few commands accordingly. `CTRL+o` to finish editing, &#9166; 
 ## Conclusion
 
 Restart your Termux to enjoy the Biometric authentication
+
+## Author
+
+- [Md Mussanna Bin Sharif Mahin](https://github.com/script-doodle)
+
+## Acknowledgements
+
+- [readme.so](https://readme.so/)
+- [ChatGPT](http://openai.com)
