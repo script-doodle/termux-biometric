@@ -26,7 +26,7 @@ You'll need an Android device that has a built-in fingerprint sensor. Fingerprin
 
 **2. Termux and Termux:API Installed**
 
-Make sure you have Termux and Termux:API installed on your Android device. You can download and install them from the [Google Play Store](https://play.google.com/store/apps/details?id=com.termux) or the [F-Droid](https://f-droid.org/en/packages/com.termux/) repository (recommend).
+Make sure you have Termux and Termux: API installed on your Android device. You can download and install them from the [Google Play Store](https://play.google.com/store/apps/details?id=com.termux) or the [F-Droid](https://f-droid.org/en/packages/com.termux/) repository (recommend).
 
 </br>
 
@@ -40,7 +40,7 @@ With these prerequisites in place, you're all set to follow the steps and add fi
 
 ## Setting up Termux Environment
 
-**1.Update Termux packages to ensure you have the latest versions.**
+**1. Update Termux packages to ensure you have the latest versions.**
 
 ```
 pkg update; pkg upgrade -y
@@ -48,17 +48,17 @@ pkg update; pkg upgrade -y
 
 </br>
 
-**2.Install necessary package to help your Termux authenticate.**
+**2.Install the necessary package to help your Termux authenticate.**
 
 ```
 pkg install -y termux-api
 ```
 
-*P.S: Don't get confused between `Termux:API` and `termux-api`*
+*P.S: Don't get confused between `Termux: API` and `termux-api`*
 
 </br>
 
-**3.Enable storage access for biometric data.**
+**3. Enable storage access for biometric data.**
 
 ```
 termux-setup-storage
@@ -70,7 +70,7 @@ termux-setup-storage
 
 We'll edit the `bash.bashrc` or `zshrc` file. Which are located at `../usr/etc/`
 
-According to your shell run one of the code below to open the file in editor
+According to your shell run one of the codes below to open the file in the editor
 
 ```
 nano ../usr/etc/bash.bashrc
@@ -80,14 +80,14 @@ nano ../usr/etc/bash.bashrc
 nano ../usr/etc/zshrc
 ```
 
-Take your cursor to the very end of editor by scrolling up or by using arrow &darr; button and paste the code below
+Take your cursor to the very end of an editor by scrolling up or by using the arrow &darr; button and paste the code below
 
 ```
 if termux-fingerprint | grep -q "AUTH_RESULT_FAILURE"; then
  am stopservice com.termux/.app.TermuxService
 fi
 ```
-Then execute next few commands accordingly. `CTRL+o` to finish editing, &#9166; to save the file and `CTRL+x` to exit the editor
+Then execute the next few commands accordingly. `CTRL+o` to finish editing, &#9166; to save the file and `CTRL+x` to exit the editor
 
 </br>
 
@@ -95,20 +95,20 @@ Then execute next few commands accordingly. `CTRL+o` to finish editing, &#9166; 
 
 We'll edit the `config.fish` file. Which is located at `../usr/etc/fish/`
 
-Run the code below to open the file in editor
+Run the code below to open the file in the editor
 
 ```
 nano ../usr/etc/fish/config.fish
 ```
 
-Take your cursor to the very end of editor by scrolling up or by using arrow &darr; button and paste the code below
+Take your cursor to the very end of an editor by scrolling up or by using the arrow &darr; button and paste the code below
 
 ```
 if termux-fingerprint | grep -q "AUTH_RESULT_FAILURE"; then
  am stopservice com.termux/.app.TermuxService
 end
 ```
-Then execute next few commands accordingly. `CTRL+o` to finish editing, &#9166; to save the file and `CTRL+x` to exit the editor
+Then execute the next few commands accordingly. `CTRL+o` to finish editing, &#9166; to save the file and `CTRL+x` to exit the editor
 
 ## Conclusion
 
@@ -116,7 +116,9 @@ Restart your Termux to enjoy the Biometric authentication
 
 ## Author
 
-- [Md Mussanna Bin Sharif Mahin](https://github.com/script-doodle)
+- [Twitter](https://twitter.com/scipt_doodle)
+- [Instagram](https://instagram.com/scipt_doodle)
+- [Facebook](https://facebook.com/script.doodle.dev)
 
 ## Acknowledgements
 
